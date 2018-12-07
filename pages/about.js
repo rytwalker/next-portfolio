@@ -29,7 +29,6 @@ const StyledAbout = styled.div`
   }
 
   .right {
-    margin-bottom: -20px;
     .about-img {
       width: 100%;
     }
