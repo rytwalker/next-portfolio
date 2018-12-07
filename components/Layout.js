@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Navbar from './Navbar';
 import '../styles/layout.css';
 
 const Layout = props => {
@@ -11,6 +12,7 @@ const Layout = props => {
           rel="stylesheet"
         />
       </Head>
+      <Navbar />
       {props.children}
     </div>
   );
