@@ -9,6 +9,8 @@ const StyledNav = styled.nav`
   max-width: 1300px;
   width: 100%;
   margin: 0 auto;
+  background: transparent;
+  z-index: 1000;
   a {
     margin-left: 2.6rem;
     color: inherit;
