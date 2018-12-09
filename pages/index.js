@@ -2,6 +2,7 @@ import Layout from '../components/Layout';
 import styled from 'styled-components';
 import Link from 'next/link';
 import { StyledButton } from '../styles/StyledButton';
+import { fadein } from '../styles/fadein';
 
 const StyledHomePage = styled.div`
   display: flex;
@@ -10,6 +11,11 @@ const StyledHomePage = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  animation: ${fadein} 0.5s ease-in forwards;
+  @media (max-width: 600px) {
+    width: 95%;
+    margin: 0 auto;
+  }
 `;
 
 const StyledHeading = styled.h1`
@@ -22,6 +28,9 @@ const StyledHeading = styled.h1`
   padding: 0;
   margin-bottom: 3rem;
   line-height: 1.1;
+  @media (max-width: 600px) {
+    font-size: 7rem;
+  }
   .last {
     color: #8fdfde;
   }

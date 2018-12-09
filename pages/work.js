@@ -1,39 +1,23 @@
 import Layout from '../components/Layout';
 import styled from 'styled-components';
+import { fadein } from '../styles/fadein';
+import Project from '../components/Project';
 
 const StyledWorkPage = styled.div`
-  /* min-height: 100vh; */
+  min-height: calc(100vh - 110px);
   display: flex;
   max-width: 1300px;
   margin: 0 auto;
   width: 100%;
   flex-wrap: wrap;
+  animation: ${fadein} 0.5s ease-in forwards;
   h1 {
     width: 100%;
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 400;
     text-transform: uppercase;
-  }
-
-  .left,
-  .right {
-    width: 50%;
-    height: 100%;
-  }
-
-  .left {
-    background-color: #8fdfde;
-  }
-
-  .right {
-    h2 {
-      font-weight: 400;
-      font-size: 4rem;
-    }
-    p {
-      font-size: 2rem;
-      line-height: 1.6;
-    }
+    margin-bottom: 3rem;
+    height: 60px;
   }
 `;
 
@@ -42,17 +26,7 @@ const Work = () => {
     <Layout>
       <StyledWorkPage>
         <h1>Work</h1>
-        <div className="left" />
-        <div className="right">
-          <h2>SUZIE'S SCORES</h2>
-          <p>
-            This is an app that does stuff and things check out the site here
-            and check out the repo on gittub it uses react, redux, postgres,
-            node, express backend. It has a full API backend that performs CRUD
-            thingys.{' '}
-          </p>
-          <p>Github Email Website</p>
-        </div>
+        <Project />
       </StyledWorkPage>
     </Layout>
   );
