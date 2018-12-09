@@ -1,5 +1,7 @@
 import Layout from '../components/Layout';
 import styled from 'styled-components';
+import { StyledButton } from '../styles/StyledButton';
+import SocialLinks from '../components/SocialLinks';
 
 const StyledAbout = styled.div`
   width: 100%;
@@ -21,14 +23,23 @@ const StyledAbout = styled.div`
     background: #8fdfde;
     margin-top: -60px;
     padding: 5rem;
+    padding-bottom: 12rem;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
     h1 {
       font-size: 4rem;
       margin-bottom: 5rem;
     }
+    button {
+      margin-bottom: auto;
+      width: 20%;
+    }
   }
 
   .right {
+    display: flex;
+    align-items: flex-end;
     .about-img {
       width: 100%;
     }
@@ -55,6 +66,8 @@ const About = () => {
             inspired me to make sites for other musicians. Some of my other
             passions include food, beer, magic, and comedy.
           </p>
+          <StyledButton>Resume</StyledButton>
+          <SocialLinks />
         </div>
         <div className="right">
           <img
