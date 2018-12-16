@@ -16,7 +16,8 @@ const StyledWorkPage = styled.div`
     font-size: 5rem;
     font-weight: 400;
     text-transform: uppercase;
-    margin-bottom: 3rem;
+    /* margin: 3rem 0; */
+    margin: 0;
     height: 60px;
   }
 `;
@@ -26,6 +27,7 @@ const Work = () => {
     <Layout>
       <StyledWorkPage>
         <h1>Work</h1>
+        <Project />
         <Project />
       </StyledWorkPage>
     </Layout>

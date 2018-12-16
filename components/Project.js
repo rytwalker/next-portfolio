@@ -3,10 +3,14 @@ import styled from 'styled-components';
 const StyledProject = styled.div`
   display: flex;
   justify-content: space-between;
+  height: calc(100vh - 190px);
+  /* background: #8fdfde; */
+  margin-bottom: 5rem;
+  align-items: center;
   .left,
   .right {
     width: 48%;
-    height: 100%;
+    /* height: 100%; */
   }
 
   .left {
@@ -25,6 +29,18 @@ const StyledProject = styled.div`
       font-size: 2rem;
       line-height: 1.6;
     }
+    nav {
+      a {
+        color: #485460;
+        font-size: 2.4rem;
+        text-decoration: none;
+        margin-right: 2rem;
+        transition: all 0.2s;
+        &:hover {
+          color: #8fdfde;
+        }
+      }
+    }
   }
 `;
 
@@ -41,7 +57,15 @@ const Project = () => {
           check out the repo on gittub it uses react, redux, postgres, node,
           express backend. It has a full API backend that performs CRUD thingys.{' '}
         </p>
-        <p>Github Email Website</p>
+        <p>Tech: React, Redux, Node, Express, Postgres</p>
+        <nav>
+          <a href="https://sharp-mccarthy-8025d0.netlify.com/" target="_blank">
+            <i className="fas fa-external-link-alt" />
+          </a>
+          <a href="https://github.com/rytwalker/scores-client" target="_blank">
+            <i className="fab fa-github" />
+          </a>
+        </nav>
       </div>
     </StyledProject>
   );

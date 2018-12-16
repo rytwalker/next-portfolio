@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 const StyledNav = styled.nav`
-  height: 50px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
