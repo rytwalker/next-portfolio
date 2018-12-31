@@ -14,15 +14,4 @@ body {
   color: #485460;
   margin: 0;
   padding: 0;
-  /* animation: fadein 5s ease-in-out forwards;
-  opacity: 0; */
 }
-
-/* @keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-} */

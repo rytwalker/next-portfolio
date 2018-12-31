@@ -1,5 +1,28 @@
 import styled from 'styled-components';
 
+const Project = props => {
+  return (
+    <StyledProject>
+      <div className="left">
+        <img src="/static/suzies-scores-desktop.png" alt="" />
+      </div>
+      <div className="right">
+        <h2>{props.title}</h2>
+        <p>{props.description}</p>
+        <p>Tech: {props.tech}</p>
+        <nav>
+          <a href={props.site} target="_blank">
+            <i className="fas fa-external-link-alt" />
+          </a>
+          <a href={props.github} target="_blank">
+            <i className="fab fa-github" />
+          </a>
+        </nav>
+      </div>
+    </StyledProject>
+  );
+};
+
 const StyledProject = styled.div`
   display: flex;
   justify-content: space-between;
@@ -50,34 +73,5 @@ const StyledProject = styled.div`
     }
   }
 `;
-
-const Project = () => {
-  return (
-    <StyledProject>
-      <div className="left">
-        <img src="/static/suzies-scores-desktop.png" alt="" />
-      </div>
-      <div className="right">
-        <h2>SUZIE'S SCORES</h2>
-        <p>
-          One of the many hats I wear is quizmaster (quizmaster hat?) at pub
-          quiz. I wanted to find a way to reward teams that come back week after
-          week. So goes the creation of Suzie's Scores. It is an app that keeps
-          track of teams' scores and compiles each weeks results to give teams
-          fat stats about their overall performance.
-        </p>
-        <p>Tech: React, Redux, Node, Express, Postgres</p>
-        <nav>
-          <a href="https://sharp-mccarthy-8025d0.netlify.com/" target="_blank">
-            <i className="fas fa-external-link-alt" />
-          </a>
-          <a href="https://github.com/rytwalker/scores-client" target="_blank">
-            <i className="fab fa-github" />
-          </a>
-        </nav>
-      </div>
-    </StyledProject>
-  );
-};
 
 export default Project;

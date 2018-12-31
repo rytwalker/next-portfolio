@@ -4,6 +4,43 @@ import { StyledButton } from '../styles/StyledButton';
 import { fadein } from '../styles/fadein';
 import SocialLinks from '../components/SocialLinks';
 
+const About = () => {
+  return (
+    <Layout>
+      <StyledAbout>
+        <div className="left">
+          <h1>About</h1>
+          <p>
+            My name is Ryan Walker and I am a full-stack developer from
+            Youngstown, Ohio. I started my journey as a developer in the fall of
+            2017. Ever since starting my development journey, I have fallen more
+            in love with the process. I am currently enrolled at Lambda School.
+            I love JavaScript and learn more about it everyday. I also know:
+            HTML, CSS, LESS, Python, and C. And like using frameworks like React
+            and Django.
+          </p>
+          <p>
+            Development is a pivot for me and I love the connection it has to
+            everything. I graduated with a BA in Sociology and Psychology. I
+            then served in in AmeriCorps and worked for non-profits before
+            running off and joining a band. I also play music in a couple of
+            musical projects: The Lighthouse and the Whaler and Poro.
+          </p>
+          <StyledButton>view my resume</StyledButton>
+          <SocialLinks />
+        </div>
+        <div className="right">
+          <img
+            src="/static/professional_photo_small_bw_crop.png"
+            alt="my image"
+            className="about-img"
+          />
+        </div>
+      </StyledAbout>
+    </Layout>
+  );
+};
+
 const StyledAbout = styled.div`
   width: 100%;
   height: 100%;
@@ -71,42 +108,5 @@ const StyledAbout = styled.div`
     }
   }
 `;
-
-const About = () => {
-  return (
-    <Layout>
-      <StyledAbout>
-        <div className="left">
-          <h1>About</h1>
-          <p>
-            My name is Ryan Walker and I am a full-stack developer from
-            Youngstown, Ohio. I started my journey as a developer in the fall of
-            2017. Ever since starting my development journey, I have fallen more
-            in love with the process. I am currently enrolled at Lambda School.
-            I love JavaScript and learn more about it everyday. I also know:
-            HTML, CSS, LESS, Python, and C. And like using frameworks like React
-            and Django.
-          </p>
-          <p>
-            Development is a pivot for me and I love the connection it has to
-            everything. I graduated with a BA in Sociology and Psychology. I
-            then served in in AmeriCorps and worked for non-profits before
-            running off and joining a band. I also play music in a couple of
-            musical projects: The Lighthouse and the Whaler and Poro.
-          </p>
-          <StyledButton>view my resume</StyledButton>
-          <SocialLinks />
-        </div>
-        <div className="right">
-          <img
-            src="/static/professional_photo_small_bw_crop.png"
-            alt="my image"
-            className="about-img"
-          />
-        </div>
-      </StyledAbout>
-    </Layout>
-  );
-};
 
 export default About;

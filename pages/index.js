@@ -4,6 +4,22 @@ import Link from 'next/link';
 import { StyledButton } from '../styles/StyledButton';
 import { fadein } from '../styles/fadein';
 
+const Index = () => {
+  return (
+    <Layout>
+      <StyledHomePage>
+        <StyledHeading>
+          Ryan <span className="last">Walker</span>
+          <span className="tag">full-stack developer</span>
+        </StyledHeading>
+        <Link href="/work">
+          <StyledButton>See my work</StyledButton>
+        </Link>
+      </StyledHomePage>
+    </Layout>
+  );
+};
+
 const StyledHomePage = styled.div`
   display: flex;
   width: 100%;
@@ -42,21 +58,5 @@ const StyledHeading = styled.h1`
     font-weight: 300;
   }
 `;
-
-const Index = () => {
-  return (
-    <Layout>
-      <StyledHomePage>
-        <StyledHeading>
-          Ryan <span className="last">Walker</span>
-          <span className="tag">full-stack developer</span>
-        </StyledHeading>
-        <Link href="/work">
-          <StyledButton>See my work</StyledButton>
-        </Link>
-      </StyledHomePage>
-    </Layout>
-  );
-};
 
 export default Index;
