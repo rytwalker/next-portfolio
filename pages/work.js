@@ -11,14 +11,24 @@ const StyledWorkPage = styled.div`
   width: 100%;
   flex-wrap: wrap;
   animation: ${fadein} 0.5s ease-in forwards;
+  @media (max-width: 800px) {
+    width: 95%;
+    margin: 0 auto;
+  }
+  @media (max-width: 600px) {
+    width: 90%;
+  }
   h1 {
     width: 100%;
     font-size: 5rem;
     font-weight: 400;
     text-transform: uppercase;
-    /* margin: 3rem 0; */
     margin: 0;
     height: 60px;
+    @media (max-width: 800px) {
+      font-size: 4rem;
+      margin-bottom: 3rem;
+    }
   }
 `;
 
