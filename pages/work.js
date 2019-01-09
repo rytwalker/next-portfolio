@@ -2,6 +2,7 @@ import Layout from '../components/Layout';
 import styled from 'styled-components';
 import { fadein } from '../styles/fadein';
 import Project from '../components/Project';
+import Footer from '../components/Footer';
 
 const Work = () => {
   return (
@@ -26,6 +27,7 @@ const Work = () => {
           site="https://sharp-mccarthy-8025d0.netlify.com/"
           github="https://github.com/rytwalker/scores-client"
         />
+        <Footer />
       </StyledWorkPage>
     </Layout>
   );

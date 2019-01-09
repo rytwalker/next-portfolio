@@ -19,7 +19,6 @@ const StyledSocialLinks = styled.nav`
 const SocialLinks = () => {
   return (
     <StyledSocialLinks>
-      socials:
       <a href="https://linkedin.com/ryan" target="_blank">
         <i class="fab fa-linkedin" />
       </a>

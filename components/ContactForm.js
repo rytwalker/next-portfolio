@@ -9,7 +9,14 @@ const initialState = {
 };
 
 class ContactForm extends Component {
-  state = { formData: initialState };
+  state = { formData: initialState, submitted: false };
+
+  componentDidUpdate() {
+    const { submitted } = this.state;
+    if (submitted) {
+      setTimeout(() => this.setState({ submitted: false }), 3000);
+    }
+  }
 
   handleInputChange = e => {
     const { formData } = this.state;
@@ -18,10 +25,25 @@ class ContactForm extends Component {
     });
   };
 
+  handleFormSubmit = e => {
+    e.preventDefault();
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...this.state.formData })
+    })
+      .then(() => this.setState({ formData: initialState, submitted: true }))
+      .catch(error => alert(error));
+  };
+
   render() {
     const { name, email, message } = this.state.formData;
+    const { submitted } = this.state;
     return (
-      <StyledForm>
+      <StyledForm onSubmit={this.handleFormSubmit}>
+        {submitted ? (
+          <div className="message">Success! Thank you for reaching out!</div>
+        ) : null}
         <h3>Get a hold of me</h3>
         <div className="form-group">
           <label htmlFor="name">Name:</label>
@@ -61,12 +83,25 @@ class ContactForm extends Component {
   }
 }
 
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
+
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   width: 60%;
   margin: 0 auto;
-
+  .message {
+    width: 100%;
+    text-align: center;
+    color: #f4f4f4;
+    background: #8fdfde;
+    padding: 1rem;
+    border-radius: 5px;
+  }
   .form-group {
     display: flex;
     flex-direction: column;
