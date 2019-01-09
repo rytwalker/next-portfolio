@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <Layout>
       <StyledContactPage>
-        <h1>Contact!</h1>
+        <h1>CONTACT</h1>
         <ContactForm />
 
         {/* <SocialLinks /> */}
@@ -28,6 +28,10 @@ const StyledContactPage = styled.div`
   animation: ${fadein} 0.5s ease-in forwards;
   h1 {
     width: 100%;
+    font-size: 5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
   }
 `;
 

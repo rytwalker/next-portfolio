@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { fadein } from '../styles/fadein';
 import { StyledButton } from '../styles/StyledButton';
 
 const initialState = {
@@ -92,15 +93,18 @@ const encode = data => {
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 40%;
   margin: 0 auto;
   .message {
     width: 100%;
     text-align: center;
-    color: #f4f4f4;
+    color: #fff;
     background: #8fdfde;
+    font-weight: bold;
     padding: 1rem;
     border-radius: 5px;
+    transition: all 0.2s;
+    animation: ${fadein} 0.3s ease-in forwards;
   }
   .form-group {
     display: flex;
@@ -115,8 +119,13 @@ const StyledForm = styled.form`
     textarea {
       font-size: 1.6rem;
       padding: 1rem;
-      border: 1px solid #e2f1ff;
+      border: 1px solid #dddddd;
       border-radius: 5px;
+      transition: all 0.2s;
+      &:focus {
+        outline: 0;
+        border: 2px solid #8fdfde;
+      }
     }
     textarea {
       min-width: 100%;
